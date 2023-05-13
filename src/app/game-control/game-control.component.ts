@@ -27,11 +27,11 @@ export class GameControlComponent {
   evenNumbers: number[] = [];
   oddNumbers: number[] = [];
 
-  @Input() num: number = 0;
+  @Input('some') numb: number = 0;
   //oddnumber = false;
   addNumber() {
-    this.num++;  
-    if (this.num % 2 == 0 ) {
+    this.numb++;  
+    if (this.numb % 2 == 0 ) {
       this.evenNumbers.push(this.evenNumbers.length+1);
     }
     else {
