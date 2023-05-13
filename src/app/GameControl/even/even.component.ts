@@ -2,6 +2,7 @@ import {
   Component,
   EventEmitter,
   OnInit,
+  Input,
   Output } from '@angular/core';
 import { GameControlComponent } from 'src/app/game-control/game-control.component';
 @Component({
@@ -10,7 +11,7 @@ import { GameControlComponent } from 'src/app/game-control/game-control.componen
   styleUrls: ['./even.component.css']
 })
 export class EvenComponent implements OnInit{
-  
+  @Input() evenNum=0;
   @Output() addedEvenNumber = new EventEmitter<{ num: number }>();
   ngOnInit(): void {
    

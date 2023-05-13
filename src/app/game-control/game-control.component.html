@@ -8,14 +8,14 @@
                     <p>{{numb}}</p>
                     <ul style="width:50%; float:right;">
                         <p>Even number</p>
-                        <li class="list-group-item" *ngFor="let item of evenNumbers">
-                            <app-even addedEvenNumber="onAddEvenNumber($event)"></app-even>
+                        <li class="list-group-item" *ngFor="let item of evenNumbers,let i=index">
+                            <app-even addedEvenNumber="onAddEvenNumber($event)" [evenNum]="i*2+2"></app-even>
                         </li>
                         </ul>
                         <ul style="width:50%; float:right;">
                             <p>Odd number</p>
-                            <li class="list-group-item" *ngFor="let item of oddNumbers ">
-                                <app-odd addedOddNumber="onAddOddNumber($event)"></app-odd>
+                            <li class="list-group-item" *ngFor="let item of oddNumbers,let i=index ">
+                                <app-odd addedOddNumber="onAddOddNumber($event)" [oddNum]="i*2+1"></app-odd>
                             </li>
                         </ul>
 

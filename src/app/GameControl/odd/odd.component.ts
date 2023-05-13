@@ -1,4 +1,4 @@
-import { Component,EventEmitter,OutputDecorator,Output } from '@angular/core';
+import { Component,EventEmitter,OutputDecorator,Output,Input } from '@angular/core';
 
 @Component({
   selector: 'app-odd',
@@ -6,6 +6,7 @@ import { Component,EventEmitter,OutputDecorator,Output } from '@angular/core';
   styleUrls: ['./odd.component.css']
 })
 export class OddComponent {
+  @Input() oddNum=0;
  @Output() addedOddNumber=new EventEmitter<{num :number}>();
  newNumber:number=1;
 
